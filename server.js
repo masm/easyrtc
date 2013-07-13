@@ -55,6 +55,7 @@ var logSocketIo = winston.loggers.get('socketIo');
 
 //  Set express http server options.
 var httpApp = express();
+injectIntoEasyWebRTC && injectIntoEasyWebRTC(httpApp);
 httpApp.configure(function() {
     var logStream = {
         write: function(message, encoding){
